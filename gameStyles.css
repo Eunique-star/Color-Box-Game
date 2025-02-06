@@ -1,0 +1,197 @@
+body{
+    background-color:#00abffdc;
+    margin:0;
+    padding:0;
+    font-family:'Courier New', Courier, monospace;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+h1{
+    font-family:"Sofia";
+    text-align:center;
+    font-size:6rem;
+    letter-spacing:10px;
+    margin: 15px auto 0;
+}
+.box {
+    position: relative;
+    left:45%;
+    top:60%;
+    bottom:10%;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: spinCube 20s linear infinite;
+}
+.face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-color:yellow;
+    border: 3px solid rgba(255, 20, 125, 0.8);
+}
+#container .face{
+    background-color: white;
+    border: 3px solid rgba(0, 0, 0, 1.0);
+}
+#container .box{
+    position: relative;
+    left:45%;
+    top:30%;
+    bottom:10%;
+}
+
+
+/* Positioning the 6 cube faces */
+.front  { transform: translateZ(50px); background-image: url('https://via.placeholder.com/100'); }
+.back   { transform: rotateY(180deg) translateZ(75px); background-image: url('https://via.placeholder.com/300'); }
+.left   { transform: rotateY(-90deg) translateZ(75px); background-image: url('https://via.placeholder.com/300'); }
+.right  { transform: rotateY(90deg) translateZ(75px); background-image: url('https://via.placeholder.com/300'); }
+.top    { transform: rotateX(90deg) translateZ(75px); background-image: url('https://via.placeholder.com/300'); }
+.bottom { transform: rotateX(-90deg) translateZ(75px); background-image: url('https://via.placeholder.com/300'); }
+
+@keyframes spinCube {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.instruction{
+    margin:70px auto 0;
+}
+.instruction h2{
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+    border-bottom:2px solid yellow;
+    margin-bottom: 0;
+}
+.instruction ul{
+    font-size: 1.5rem;
+    margin: 0 70px;
+    font-weight:600;
+    color:white;
+}
+.instruction li{
+    padding:5px;
+    margin:0;
+    text-align:justify;
+}
+#start, #reset{
+    margin:2.5vw 40vw;
+    width:20%;
+    padding:10px;
+    border-radius:20px;
+    background:#f4f4f4;
+    font-size:1rem;
+    font-weight:bold;
+    box-shadow: 3px 3px 2px;
+}
+#reset{
+    background-color:#00abffdc;
+    cursor: pointer;
+    margin:3vw 40vw;
+}
+#reset:hover{
+    background-color: red;
+}
+#start:hover{
+    background:#f77619e9;
+}
+#start a{
+    text-decoration: none;
+    color:black;
+}
+.bg{
+    background-color:#00abffdc;
+    width:100%;
+    height:35vh;
+    margin: 0;
+}
+#score{
+    font-size:3rem;
+    font-family: Helvetica, Impact, serif;
+    font-weight:bold;
+    color:white;
+    margin-left: 2em;
+}
+
+.buttonContainer{
+    margin:4em auto 3em;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    gap:1em;
+}
+.color-button{
+    width:7rem;
+    height:4rem;
+    font-size:1.2rem;
+    font-weight:bold;
+    box-sizing:border-box;
+    border:2px solid;
+    cursor:pointer;
+}
+.color-button:hover{
+    border:3px ridge rgb(0, 162, 255);
+    box-shadow: 4px 4px 6px rgb(39, 39, 236);
+}
+#remark{
+    margin-top:3em;
+    text-align: center;
+    font-size:2rem;
+    font-family: Helvetica, Impact, serif;
+    font-weight:bold;
+}
+#status{
+    margin-top:1em;
+    text-align: center;
+    font-size:1.5rem;
+    font-family: Helvetica, Impact, serif;
+    font-weight:bold;
+    display:none;
+}
+@keyframes confetti-fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(500px) rotate(720deg); opacity: 0; }
+}
+
+@keyframes confetti-fall {
+0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+100% { transform: translateY(600px) rotate(720deg); opacity: 0; }
+}
+
+.confetti {
+position: fixed;
+width: 15px;
+height: 15px;
+background-color: #f39c12;
+opacity: 1;
+border-radius: 50%;
+animation: confetti-fall 2s ease-out forwards;
+}
+
+.confetti:nth-child(odd) {
+background-color: #e74c3c;
+}
+
+.confetti:nth-child(even) {
+background-color: #2ecc71;
+}
+@media (max-width: 600px) {
+    #container .box{
+        position: relative;
+        left:40%;
+        top:45%;
+        bottom:10%;
+}
+@media (max-width: 800px) {
+    #container .box{
+        position: relative;
+        left:40%;
+        top:45%;
+        bottom:10%;
+}

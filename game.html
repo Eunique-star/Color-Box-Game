@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Color Box</title>
+    <link rel="stylesheet" href="gameStyles.css">
+</head>
+<body style="background-color: aliceblue;">
+    <div id="container">
+    <div class="bg">
+        <p id="score" data-testid="score">Score:</p>
+        <div class="box" data-testid="colorBox">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+    </div>
+    </div>
+
+    <div id="remark" data-testid="gameInstructions">Guess the correct color!</div>
+    <div id="status" data-testid="gameStatus"></div>
+    <div class="buttonContainer" data-testid="colorOption">
+        <button class="color-button">Option 1</button>
+        <button class="color-button">Option 2</button>
+        <button class="color-button">Option 3</button>
+        <button class="color-button">Option 4</button>
+        <button class="color-button">Option 5</button>
+        <button class="color-button">Option 6</button>
+    </div>
+    
+    
+        <button id="reset" data-testid="newGameButton">Reset</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

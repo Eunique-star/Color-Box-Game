@@ -47,7 +47,7 @@ h1{
 
 
 /* Positioning the 6 cube faces */
-.front  { transform: translateZ(50px); background-image: url('https://via.placeholder.com/100'); }
+.front  { transform: translateZ(50px); background-image: url('https://via.placeholder.com/300'); }
 .back   { transform: rotateY(180deg) translateZ(75px); background-image: url('https://via.placeholder.com/300'); }
 .left   { transform: rotateY(-90deg) translateZ(75px); background-image: url('https://via.placeholder.com/300'); }
 .right  { transform: rotateY(90deg) translateZ(75px); background-image: url('https://via.placeholder.com/300'); }
@@ -194,6 +194,26 @@ background-color: #2ecc71;
     height:25vh;
     margin: 0;
 }
+#container .face{
+    width: 100px;
+    height: 100px;
+    border: 3px solid rgba(0, 0, 0, 1.0);
+}
+#container .box{
+    position: relative;
+    left:35%;
+    top:30%;
+    bottom:10%;
+    width: 100px;
+    height: 100px;
+}
+/* Positioning the 6 cube faces */
+.front  { transform: translateZ(50px); background-image: url('https://via.placeholder.com/300'); }
+.back   { transform: rotateY(180deg) translateZ(50px); background-image: url('https://via.placeholder.com/100'); }
+.left   { transform: rotateY(-90deg) translateZ(50px); background-image: url('https://via.placeholder.com/100'); }
+.right  { transform: rotateY(90deg) translateZ(50px); background-image: url('https://via.placeholder.com/100'); }
+.top    { transform: rotateX(90deg) translateZ(50px); background-image: url('https://via.placeholder.com/100'); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); background-image: url('https://via.placeholder.com/100'); }
 }
 @media (max-width: 1200px) {
     #container .box{
